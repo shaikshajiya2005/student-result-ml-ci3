@@ -9,10 +9,11 @@ app = Flask(__name__)
 MODEL_PATH = Path("student_result_model.pkl")
 
 FEATURES = [
-    "attendance",
-    "internal_marks",
-    "assignment_marks",
-    "previous_score"
+    "Study_Hours",
+    "Attendance",
+    "Assignment_Score",
+    "Internal_Marks",
+    "Previous_Score"
 ]
 
 
