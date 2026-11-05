@@ -8,14 +8,18 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
-# Generate sample student result data
-X, y = make_classification(
-    n_samples=300,
-    n_features=5,
-    n_informative=3,
-    n_redundant=0,
-    random_state=42
-)
+# Generate meaningful student result data
+np.random.seed(42)
+
+X = np.column_stack([
+    np.random.randint(1, 11, 300),
+    np.random.randint(0, 101, 300),
+    np.random.randint(0, 101, 300),
+    np.random.randint(0, 101, 300),
+    np.random.randint(0, 101, 300)
+])
+
+y = (X.mean(axis=1) >= 50).astype(int)
 
 # Save generated dataset
 data = pd.DataFrame(X, columns=[
