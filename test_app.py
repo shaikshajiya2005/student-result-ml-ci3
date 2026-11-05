@@ -36,11 +36,11 @@ class TestPredictionApplication(unittest.TestCase):
         response = self.client.post(
             "/predict",
             json={
-                "Study_Hours": 2,
-                "Attendance": 55,
-                "Assignment_Score": 40,
-                "Internal_Marks": 30,
-                "Previous_Score": 35
+                "Study_Hours": 1,
+                "Attendance": 10,
+                "Assignment_Score": 10,
+                "Internal_Marks": 10,
+                "Previous_Score": 10
             }
         )
 
